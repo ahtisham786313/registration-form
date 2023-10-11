@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Software Company Registration</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+
+  <div class="container mt-5">
+    <h2 class="mb-4">Software Company Registration</h2>
+
+    <form id="registrationForm">
+      <div class="form-group">
+        <label for="fullName">Full Name</label>
+        <input type="text" class="form-control" id="fullName" name="fullName" required>
+      </div>
+
+      <div class="form-group">
+        <label for="fatherName">Father Name</label>
+        <input type="text" class="form-control" id="fatherName" name="fatherName" required>
+      </div>
+
+      <div class="form-group">
+        <label for="country">Country</label>
+        <input type="text" class="form-control" id="country" name="country" required>
+      </div>
+
+      <div class="form-group">
+        <label for="education">Education</label>
+        <select class="form-control" id="education" name="education" required>
+          <option value="" disabled selected>Select Education</option>
+          <option value="Matric">Matric</option>
+          <option value="Intermediate">Intermediate</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <h4>Programming Languages</h4>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" value="html_css" id="html_css" name="languages[]">
+          <label class="form-check-label" for="html_css">HTML/CSS</label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" value="javascript" id="javascript" name="languages[]">
+          <label class="form-check-label" for="javascript">JavaScript</label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" value="python" id="python" name="languages[]">
+          <label class="form-check-label" for="python">Python</label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" value="react" id="react" name="languages[]">
+          <label class="form-check-label" for="react">React.js</label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" value="next" id="next" name="languages[]">
+          <label class="form-check-label" for="next">Next.js</label>
+        </div>
+      </div>
+
+      <button type="submit" class="btn btn-primary animated bounce">Register</button>
+    </form>
+  </div>
+
+  <!-- Bootstrap JS and dependencies -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+  <!-- Your custom JavaScript -->
+  <script>
+    document.getElementById("registrationForm").addEventListener("submit", function (event) {
+      event.preventDefault();
+
+      // You can add your registration logic here
+      // For now, let's just log the form data to the console
+      var formData = new FormData(event.target);
+      formData.forEach(function (value, key) {
+        console.log(key, value);
+      });
+    });
+  </script>
+
+</body>
+
+</html>
